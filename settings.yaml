@@ -1,0 +1,59 @@
+general:
+  label: 功能设置
+  items:
+    global_comment_switch:
+      name: global_comment_switch
+      label: 全局评论显示开关
+      type: select
+      default: open
+      options:
+        - value: open
+          label: 打开
+        - value: close
+          label: 关闭
+    article_item_background:
+      name: article_item_background
+      label: 封面图
+      type: select
+      default: random
+      options:
+        - value: none
+          label: 空白图
+        - value: random
+          label: 随机图
+        - value: settingExist
+          label: 封面图（无设置则空白）
+        - value: settingExistRandom
+          label: 封面图（无设置则随机）
+    random_item_background:
+      name: random_item_background
+      label: 随机封面图图源
+      type: select
+      default: https://api.btstu.cn/sjbz/api.php
+      options:
+        - value: https://api.btstu.cn/sjbz/api.php
+          label: 搏天 [养眼]
+        - value: https://api.likepoems.com/img/sina/nature
+          label: likepoems [景色]
+        - value: https://www.dmoe.cc/random.php
+          label: 樱花 [动漫]
+        - value: https://api.ixiaowai.cn/api/api.php
+          label: 小歪 [动漫]
+        - value: https://api.mtyqx.cn/tapi/random.php
+          label: 墨天逸 [动漫]
+        - value: https://api.yimian.xyz/img
+          label: EEE.DOG [动漫]
+        - value: https://img.paulzzh.tech/touhou/random
+          label: 东方Project [动漫]
+        - value: https://service-5z0sdahv-1306777571.sh.apigw.tencentcs.com/release/
+          label: 洛川唧上的萌部图片 [动漫]
+        - value: https://api.dujin.org/pic/yuanshen/
+          label: 缙哥哥博客 [动漫]
+    bottom_html:
+      name: bottom_html
+      label: 底部自定义html
+      type: textarea
+      placeholder: ''
+      default: ''
+      description: ''  
+            

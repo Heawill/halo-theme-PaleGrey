@@ -1,0 +1,283 @@
+/*底部浮动菜单相关样式*/
+
+@media screen and (max-width: 860px) {
+    /* 悬浮菜单适配 */
+    .float-menu{
+        height: auto !important;
+        width: 270px !important;
+        left: calc(50% - 135px) !important;
+        min-width: 270px;
+    }
+    .float-menu .personal-details .user-name {
+        display: none !important;
+    }
+    .brie-introduction {
+        display: none !important;
+    }
+    .function-button {
+        margin: auto;
+    }
+    .float-menu-search,.float-menu-category,.float-menu-menu {
+        width: 90% !important;
+        left: 5% !important;
+        top: 5% !important;
+    }
+    .float-menu-tag {
+        width: 90% !important;
+        left: 3% !important;
+        top: 5% !important;
+        height: auto;
+    }
+    .float-menu .function-button {
+        padding-right: 0px !important;
+    }
+    #head-ortraits{
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+}
+
+/* 浮动菜单样式 */
+.float-menu {
+    background-color: white;
+    border-radius: 10px;
+    /* height: 60px; */
+    width: 40%;
+    -moz-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    -webkit-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    box-shadow:2px 2px 10px rgb(195, 195, 195);
+    position: fixed;
+    left: calc(50% - 20%);
+    bottom: 10px;
+    padding: 6px;
+    display: flex;
+    flex-flow: row;
+    z-index: 1500;
+}
+.float-menu > *{
+    user-select: none;
+}
+.float-menu .rightArea {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+.float-menu .head-ortraits {
+    object-fit: cover;
+    width: 54px;
+    min-width: 54px;
+    height: 54px;
+    min-height: 54px;
+    border-radius: 50px;
+    margin: auto 10px;
+    cursor: pointer;
+}
+.float-menu .rightArea .personal-details {
+    display: flex;
+    flex-flow: row;
+    margin-right: auto;
+    overflow: hidden;
+    width: 100%;
+    height: 36px;
+}
+.float-menu .rightArea .personal-details .user-name {
+    display: flex;
+    flex-flow: row;
+    margin: auto 0px;
+    margin-right: 14px;
+}
+.float-menu .rightArea .personal-details .user-name a {
+    color: #5f5f5f;
+    font-size: 1.3em;
+    font-weight: 546;
+    /* margin: auto 6px; */
+}
+.float-menu .brie-introduction {
+    max-height: 40px;
+    overflow: hidden;
+}
+.float-menu .brie-introduction a {
+    color: #5f5f5f;
+    font-size: 0.8em;
+    /* margin: auto 6px; */
+}
+.float-menu .function-button{
+    margin-left: auto;
+}
+.float-menu .function-button .button-img{
+    cursor: pointer;
+}
+.float-menu .function-button .button-category-img{
+    height: 34px;
+}
+.float-menu .function-button .button-tag-img{
+    height: 30px;
+    margin-bottom: 2px;
+}
+.float-menu .function-button .button-serach-img{
+    height: 31px;
+    margin-bottom: 1.4px;
+    margin-left: 5.5px;
+}
+.float-menu .function-button .button-admin-img{
+    height: 28.2px;
+    margin-bottom: 3.4px;
+}
+.float-menu .function-button .button-home-img{
+    height: 24px;
+    margin-bottom: 5.7px;
+    margin-left: 4px;
+}
+.float-menu .function-button .button-top-img{
+    height: 26px;
+    margin-bottom: 4.8px;
+    margin-left: 4px;
+}
+.float-menu .function-button .button-title-img{
+    height: 34px;
+}
+
+/* 浮动菜单子菜单：搜索 */
+.float-menu-search {
+    background-color: white;
+    border-radius: 10px;
+    width: 20%;
+    -moz-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    -webkit-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    box-shadow:2px 2px 10px rgb(195, 195, 195);
+    position: fixed;
+    left: calc(50% - 20%/2);
+    bottom: 110px;
+    padding: 3px;
+    display: none;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding: 6px;
+    max-height: 26px;
+    z-index: 1000;
+}
+.float-menu-search input[type=text], select {
+    border: 0px solid #ccc;
+    padding: 6px;
+    width: 100%;
+}
+.float-menu-search input:focus {
+    outline: none;
+}
+
+/* 浮动菜单子菜单：文章目录 */
+.float-menu-menu {
+    background-color: white;
+    border-radius: 10px;
+    width: 34%;
+    -moz-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    -webkit-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    box-shadow:2px 2px 10px rgb(195, 195, 195);
+    position: fixed;
+    left: calc(50% - 34%/2);
+    bottom: 110px;
+    padding: 3px;
+    display: none;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding: 6px;
+    /* max-height: 26px; */
+    overflow: hidden;
+    z-index: 1000;
+}
+#float-menu-menu #menu-content{
+    background: #fff;
+    /* border:1px  #32c6c6 solid;  */
+    border-radius: 4px;
+    padding: 0 6px;
+    max-height: 500px;
+    overflow: scroll;
+    /* margin-right: -40px;
+    margin-bottom: -40px; */
+}
+#float-menu-menu #menu-content a {
+    width: 100%;
+    display: inline-block;
+    font-size: 0.9em;
+}
+
+/* 浮动菜单子菜单：标签云 */
+.float-menu-tag {
+    background-color: white;
+    border-radius: 10px;
+    width: 24%;
+    -moz-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    -webkit-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    box-shadow:2px 2px 10px rgb(195, 195, 195);
+    position: fixed;
+    left: calc(50% - 24%/2);
+    bottom: 110px;
+    padding: 3px;
+    display: none;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    min-height: 20px;
+    z-index: 1000;
+}
+.tags {
+    margin: 3px;
+    margin-bottom: 8px;
+}
+.tag {
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 50px;
+    color: #4a4a4a;
+    display: inline-flex;
+    font-size: .7rem;
+    height: 2em;
+    justify-content: center;
+    line-height: 1.5;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    white-space: nowrap;
+    margin-left: 6px;
+}
+.tag.name {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.tag.number {
+    background: #e7e7e7;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -6px;
+}
+
+/* 浮动菜单子菜单：文章分类 */
+.float-menu-category {
+    background-color: white;
+    border-radius: 10px;
+    width: 30%;
+    -moz-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    -webkit-box-shadow:2px 2px 10px rgb(195, 195, 195);
+    box-shadow:2px 2px 10px rgb(195, 195, 195);
+    position: fixed;
+    left: calc(50% - 30%/2);
+    bottom: 110px;
+    padding: 3px;
+    display: none;
+    flex-flow: row;
+    flex-wrap: wrap;
+    padding: 4px;
+    min-height: 20px;
+    z-index: 1000;
+}
+.float-menu-category a {
+    font-size: 0.9em;
+}
+
+/* 文章菜单的滚动条 */
+#menu-content::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: rgb(255, 255, 255);
+}
